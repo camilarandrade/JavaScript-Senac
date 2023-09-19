@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cor de fundo!</title>
+</head>
+<body>
+
+    <!-- Desenvolva um script em que interaja com o usuário, solicitando que ele insira o nome de uma cor em inglês. O Script verificará se a cor inserida é igual a 'yellow' e, se for o caso, alterará o plano de fundo da página para essa cor, exibindo a mensagem 'Muito bem, [cor] é uma linda cor!' em um título grande. Caso contrário, se a cor inserida for diferente de 'yellow', o script mostrará a mensagem 'Lamento, [cor] não é uma cor legal!' Em um título menor -->
+    
+    <script>
+         let cor = prompt('Digite uma cor em inglês: ','');
+
+         if (cor == 'yellow') {
+            document.write('<h1>Muito bem ' + cor + ' é uma linda cor!</h1>');
+            document.bgColor = cor;
+
+        } else {
+            document.write('<h3>Lamento, '+ cor + ' não é uma cor legal!</h3>');
+            
+
+        }
+
+    </script>
+
+</body>
+</html>
