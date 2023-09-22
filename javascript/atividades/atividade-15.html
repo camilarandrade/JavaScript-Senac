@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+</head>
+
+<body>
+
+    <!-- Crie um programa em JavaScript que permita ao usuário inserir os valores dos três lados de um triângulo.
+
+    O programa deverá exibir os valores dos lados um abaixo do outro e, em seguida, determinar e mostrar o tipo de triângulo com base nos valores fornecidos. 
+    
+    O tipo de triângulo pode ser "equilátero" se todos os lados forem iguais, "isósceles" se pelo menos dois lados forem iguais, ou "escaleno" se todos os lados forem diferentes. 
+
+    Certifique-se de exibir claramente os valores dos lados e o tipo de triângulo no resultado final.  -->
+
+    <script>
+
+        let valor1 = prompt('Digite o valor do primeiro lado do triângulo: ', '');
+        let valor2 = prompt('Digite o valor do segundo lado do triângulo: ', '');
+        let valor3 = prompt('Digite o valor do terceiro lado do triângulo: ', '');
+
+       
+        if (valor1 === valor2 && valor2 === valor3 && valor3 === valor1) {
+            document.write('Lado 1: ' + valor1 + '<br>Lado 2: ' + valor2 + '<br>Lado 3: ' + valor3);
+            document.write('<br> Os lados do triângulo são iguais, é um <b><font color=blue> triângulo equilátero.')
+            }
+
+            else if (valor1 === valor2 || valor2 === valor3 || valor3 === valor1) {
+            document.write('Lado 1: ' + valor1 + '<br>Lado 2: ' + valor2 + '<br>Lado 3: ' + valor3);
+            document.write('<br> Dois lados do triângulo são iguais, é um <b><font color=blue> triângulo isósceles.') 
+            }
+            
+            else {
+                document.write('Lado 1: ' + valor1 + '<br>Lado 2: ' + valor2 + '<br>Lado 3: ' + valor3);
+            document.write('<br> Os lados do triângulo não são iguais, é um <b><font color=blue> escaleno') 
+            }
+        
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

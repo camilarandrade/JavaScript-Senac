@@ -12,104 +12,103 @@
     <script>
             
             let fruta = (prompt ('Digite o nome de uma fruta: ', ''));
-            let nomefrutapt;
             let nomefrutaing; 
             let imgfruta; 
 
             switch (fruta) {
 
                 case 'abacaxi':
-                    nomefrutapt = 'abacaxi'
+                    
                     nomefrutaing = 'pineapple'
                     imgfruta = '<img src=imagens/abacaxi.jpg width=200px>' 
                     break;
 
                     case 'banana':
-                    nomefrutapt = 'banana'
+                    
                     nomefrutaing = 'banana'
                     imgfruta = '<img src=imagens/banana.jpg width=200px>' 
                     break;
 
                     case 'caqui':
-                    nomefrutapt = 'caqui'
+                    
                     nomefrutaing = 'Persimmon'
                     imgfruta = '<img src=imagens/caqui.jpg width=200px>' 
                     break;
 
                     case 'coco':
-                    nomefrutapt = 'coco'
+                    
                     nomefrutaing = 'coconut'
                     imgfruta = '<img src=imagens/coco.jpg width=200px>' 
                     break;
 
                     case 'goiaba':
-                    nomefrutapt = 'goiaba'
+                    
                     nomefrutaing = 'guava'
                     imgfruta = '<img src=imagens/goiaba.jpg width=200px>' 
                     break;
 
                     case 'laranja':
-                    nomefrutapt = 'laranja'
+                    
                     nomefrutaing = 'orange'
                     imgfruta = '<img src=imagens/laranja.jpg width=200px>' 
                     break;
 
                     case 'maçã':
-                    nomefrutapt = 'maçâ'
+                   
                     nomefrutaing = 'apple'
                     imgfruta = '<img src=imagens/maca.jpg width=200px>' 
                     break;
 
                     case 'mamão':
-                    nomefrutapt = 'mamão'
+                    
                     nomefrutaing = 'papaya'
                     imgfruta = '<img src=imagens/mamao.jpg width=200px>' 
                     break;
 
                     case 'manga':
-                    nomefrutapt = 'manga'
+                   
                     nomefrutaing = 'mango'
                     imgfruta = '<img src=imagens/manga.jpg width=200px>' 
                     break;
 
                     case 'melancia':
-                    nomefrutapt = 'melancia'
+                    
                     nomefrutaing = 'watermelon'
                     imgfruta = '<img src=imagens/melancia.png width=200px>' 
                     break;
 
                     case 'melão':
-                    nomefrutapt = 'melão'
+                    
                     nomefrutaing = 'Cantaloupe'
                     imgfruta = '<img src=imagens/melao.jpg width=200px>' 
                     break;
 
                     case 'morango':
-                    nomefrutapt = 'morango'
+                    
                     nomefrutaing = 'strawberry'
                     imgfruta = '<img src=imagens/morango.png width=200px>' 
                     break;
 
                     case 'pêra':
-                    nomefrutapt = 'pêra'
+                    
                     nomefrutaing = 'pear'
                     imgfruta = '<img src=imagens/pera.jpg width=200px>' 
                     break;
 
                     case 'tangerina':
-                    nomefrutapt = 'tangerina'
+                    
                     nomefrutaing = 'tangerine'
                     imgfruta = '<img src=imagens/tangerina.jpg width=200px>' 
                     break;
 
                     case 'uva':
-                    nomefrutapt = 'uva'
+                    
                     nomefrutaing = 'grape'
                     imgfruta = '<img src=imagens/uva.jpg width=200px>' 
                     break;
 
                     default:
-                    nomefrutapt = fruta 
+                    
                     imgfruta = '<img src=imagens/caixa.jpg width=200px>'
                     nomefrutaing= 'Fruta inexistente na lista ou digitada incorretamente';  
                     break;
@@ -117,7 +116,7 @@
 
             
             
-            document.write ('Nome da fruta em português: <font color= blue><b>'+ nomefrutapt +'</font></b><br>' + imgfruta + '<br>Nome da fruta em inglês <b><font color=red> ' + nomefrutaing + '</b></font>');
+            document.write ('Nome da fruta em português: <font color= blue><b>'+ fruta +'</font></b><br>' + imgfruta + '<br>Nome da fruta em inglês <b><font color=red> ' + nomefrutaing + '</b></font>');
 
             
     </script>
