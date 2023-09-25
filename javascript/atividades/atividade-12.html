@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Switch</title>
+</head>
+<body>
+
+    <!-- Crie um programa que solicite o usuário que digite o nome de um animal, e após a digitação, exiba na tela uma curiosidade sobre o animal digitado. -->
+    <script>
+
+     let animal = prompt ('Digite o nome de um animal ', '');
+     let curiosidade;
+        
+
+        switch (animal) 
+        {
+            case 'cachorro':
+                curiosidade = 'O olfato canino é 1 milhão de vezes melhor do que o dos humanos';
+                break;
+            case 'gato':
+                curiosidade = 'Em média um gato passa 2/3 do dia a dormir';
+                break;
+            case 'leão':
+                curiosidade = 'Os leões podem viver até 20 anos';
+                break;
+            case 'girafa':
+                curiosidade = 'A girafa (Giraffa camelopardalis) é o animal mais alto do mundo. Isso porque ela pode atingir até 5,7 metros de altura, do chão até os chifres,';
+                break;
+            default:
+                curiosidade = 'Poxa ): Ainda não possuímos esse animal em nossa lista de curiosidades, tente novamente!'
+        }
+
+        document.write ('<b> Animal escolhido:</b> '+ animal + '<br><b>Curiosidade: </b>' + curiosidade);
+        
+    </script>
+</body>
+</html>

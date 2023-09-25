@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de alternativa</title>
+</head>
+<body>
+
+    <!-- Crie um quiz com 10 perguntas e 4 alternativas para cada pergunta, solicitar ao usuário para escolher a alternativa correta e no final de todas as questões exibir a alternativa correta, a alternativa escolhida e a soma dos acertos. -->
+
+    <script>
+
+let codigoAlternativa = prompt ('Digite o número da alternativa correta', '');
+
+        let resposta; 
+
+        switch (codigoAlternativa) {
+            case 1:
+                status = 'Aberto';
+                break;
+            case 2:
+                status = 'Em andamento';
+                break;
+            case 3:
+                status = 'Resolvido';
+                break;
+            case 4:
+                status = 'Fechado';
+                break;
+            default:
+                status = 'Codigo inexistente, tente novamente'
+        }
+
+        alert(status);
+
+    </script>
+    
+</body>
+</html>
