@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return com parâmetros definidos pelo usuário</title>
+</head>
+<body>
+
+    <script>
+
+        function somarValores (a,b) {
+        return a + b; 
+
+        }
+
+    //Aqui permitimos que os valores dos parâmetros sejam definidos pelo usuário
+    
+    a= parseInt (prompt ('Valor 1: ', ''));
+    b= parseInt (prompt ('Valor 2: ', '')); 
+
+    //A variável resultado está recebendo a função somarValores 
+
+    let resultado = somarValores (a,b); 
+
+    //Exibirá o resultado da soma no console. 
+    
+    console.log (resultado);
+    document.write (resultado);
+
+    </script>
+    
+</body>
+</html>
