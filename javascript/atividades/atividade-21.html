@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Média</title>
+</head>
+
+<body>
+
+    <!-- Em excel temos uma função muito utilizada chamada média, que tem como objetivo a soma dos valores das células selecionadas dividido pela quantidade de valores retornando assim o valor médio. Reproduza esse conceito criando uma função em javascript. -->
+
+    <script>
+
+        function calcularMedia () {
+        soma = parseFloat(nota1 + nota2 + nota3 + nota4);
+        divisao = parseFloat (soma/4);
+        return document.write (divisao); 
+
+    }
+             nota1 = parseFloat (prompt ('Digite a sua primeira nota: ',''));
+             nota2 = parseFloat (prompt ('Digite a sua segunda nota: ',''));
+             nota3 = parseFloat (prompt ('Digite a sua terceira nota: ',''));
+             nota4 = parseFloat (prompt ('Digite a sua quarta nota: ',''));
+
+        //    let resultado =  calcularMedia();
+
+        document.write ('<b>Nota 1: </b>' +nota1 + '<br><b>Nota 2: </b>' + nota2 + '<br><b>Nota 3: </b>' + nota3 + '<br><b>Nota 4: </b>' + nota4 + '<br><b>Média: </b>')
+
+         calcularMedia
+
+
+    </script>
+
+
+</body>
+
+</html>
