@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+</head>
+<body>
+
+    <!-- Crie um programa que leia dois números inteiros e qual operação deseja fazer com os números (soma, subtração, multiplicação ou divisão) No final exibir os números digitados, a operação escolhida e o resultado. -->
+
+    <script>
+        
+        let n1 = parseInt (prompt('Digite o primeiro número: ', ''));
+        let n2 = parseInt (prompt('Digite o segundo número: ', ''));
+        let calculo= prompt ('Digite o sinal da conta que gostaria de realizar com esses números (+, -, * ou /)', '');
+        let resultado
+
+
+        if (calculo == '+') {
+           resultado= n1+n2; 
+
+            document.write ('Primeiro valor: ' + n1 + ' <br>Segundo valor: ' + n2 + '<br>Operação escolhida: Soma' + '<br>Resultado: ' + resultado);
+        }
+
+        if (calculo == '-') {
+           resultado= n1-n2; 
+
+           document.write ('Primeiro valor: ' + n1 + ' <br>Segundo valor: ' + n2 + '<br>Operação escolhida: Subtração' + '<br>Resultado: ' + resultado);
+
+        }
+
+        if (calculo == '*') {
+           resultado= n1*n2; 
+
+           document.write ('Primeiro valor: ' + n1 + ' <br>Segundo valor: ' + n2 + '<br>Operação escolhida: Multiplicação' + '<br>Resultado: ' + resultado);
+
+        }
+
+        if (calculo == '/') {
+           resultado= n1/n2; 
+
+           document.write ('Primeiro valor: ' + n1 + ' <br>Segundo valor: ' + n2 + '<br>Operação escolhida: Divisão' + '<br>Resultado: ' + resultado);
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
