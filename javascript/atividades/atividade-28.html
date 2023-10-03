@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Eventos de mouse</title>
+
+    <style>
+       div {
+            
+            border-radius: 50%;
+            border: 1px solid black;
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            float: left;
+           align-items: center;
+           justify-content: center;
+           margin-left: 50px;
+   
+        }
+
+        #box1 { 
+            background-color: rgb(218, 151, 28);
+        }
+
+        #box2 {
+            background-color: green;
+        }
+
+        #box3 {
+            background-color: pink;
+        }
+
+        #box4 {
+            background-color: rgb(145, 19, 19);
+        }
+
+        #box5 {
+            background-color: blueviolet;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <script>
+        function errado1() {
+            document.getElementById("box1").innerHTML="X";
+            box1.style.backgroundColor = "white";
+        }
+
+        function errado2() {
+            document.getElementById("box2").innerHTML="X";
+            box2.style.backgroundColor = "white";
+        }
+
+        function errado3() {
+            document.getElementById("box3").innerHTML="X";
+            box3.style.backgroundColor = "white";
+        }
+
+        function errado4() {
+            document.getElementById("box4").innerHTML="X";
+            box4.style.backgroundColor = "white";
+        }
+
+        function certo5() {
+            document.getElementById("box5").innerHTML="PREMIADO";
+            box5.style.backgroundColor = "white";
+        }
+
+    </script>
+
+    <div id= "box1" onmouseup= "errado1()"></div>
+
+    
+
+    <div id="box2" onmouseup="errado2()">
+        
+    </div>
+
+    <div id="box3" onmouseup="errado3()">
+        
+    </div>
+
+    <div id="box4" onmouseup="errado4()">
+        
+    </div>
+
+    <div id="box5" onmouseup="certo5()">
+        
+    </div>
+    
+   
+     
+    
+   
+</body>
+</html>
