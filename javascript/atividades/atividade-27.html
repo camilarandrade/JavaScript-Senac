@@ -10,14 +10,18 @@
     <!-- Imprima o dia, o mês e o ano de acordo com o sistema operacional -->
 
     <script>
+        let data = new Date();
+        let mes;
+        let dia;
 
-       let data= new Date ();
-      
+        if (data.getDate() < 10) {
+            dia = '0' + data.getDate();
+        }
 
-        document.write ('<h1><font color=purple>' + data.getDate (), ' de ', data.getMonth(), ' de ', data.getFullYear());
-        
-
-
+        if (data.getMonth() < 10) {
+            mes =  + (data.getMonth()+1);
+       }
+        document.write('<font color=blue><h1>' + data.getDate() + '/' + mes + '/' + data.getFullYear() + '</h1></font>');
     </script>
     
 </body>
