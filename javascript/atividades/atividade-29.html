@@ -12,25 +12,23 @@
     <!-- Crie um programa usando eventos em javascript para ligar e desligar uma lâmpada -->
 
     <script>
-
         function liga() {
-
-            document.write('<img src=imagens/liga.png width=200px>')
+            document.getElementById("lampada").src = "imagens/liga.png";
         }
-
+    
         function desliga() {
-
-            document.write('<img src=imagens/desliga.png width=200px>')
-            
+            document.getElementById("lampada").src = "imagens/desliga.png";
         }
-        </script>
-
+    </script>
+    
     <div>
-        <img src="imagens/desliga.png" width="200px"><br>
-        
-    <input type="radio" id="teste" name="liga" onclick="liga()">Liga
-    <input type="radio" id="teste" name="desliga" onclick="desliga()">Desliga
-</div>
+        <img id="lampada" src="imagens/desliga.png" width="200px"><br>
+    
+        <input type="radio" id="on" name="lampada" onclick="liga()">Liga
+        <input type="radio" id="off" name="lampada" onclick="desliga()">Desliga
+    </div>
+
+
 
 
 </body>
