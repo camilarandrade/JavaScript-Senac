@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recurso de Array</title>
+</head>
+
+<body>
+
+    <!-- Elabore um programa utilizando os recurso de Array que você aprendeu na aula -->
+    <script>
+        let nomesDeAnimais = ["Gato", "Cachorro", "Urso", "Leão", "Tamanduá"];
+
+        console.log(nomesDeAnimais[0]); //gato
+        console.log(nomesDeAnimais[1]); //cachorro
+        console.log(nomesDeAnimais[2]); //urso
+        console.log(nomesDeAnimais[3]); //leão
+        console.log(nomesDeAnimais[4]); //tamanduá
+
+        let numeroAnimal = prompt('Digite um número de 1 a 5 e exibiremos o nome de um animal que consta em nossa lista ', '')
+
+        switch (numeroAnimal) {
+            case '1':
+                lista = 0
+                break;
+
+            case '2':
+                lista = 1
+                break;
+
+            case '3':
+                lista = 2
+                break;
+
+            case '4':
+                lista = 3
+                break;
+
+            case '5':
+                lista = 4
+                break;
+
+            case '6':
+                lista = 5
+                break;
+
+            default:
+                alert("Animal ainda não incluso em nossa lista, por favor tentar novamente.");
+        }
+
+        if (lista !== undefined) {
+            alert("Você digitou: " + numeroAnimal + "\n O animal correspondente é: " + nomesDeAnimais[lista]);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -3,99 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Eventos de mouse</title>
-
-    <style>
-       div {
-            
-            border-radius: 50%;
-            border: 1px solid black;
-            width: 10rem;
-            height: 10rem;
-            display: flex;
-            float: left;
-           align-items: center;
-           justify-content: center;
-           margin-left: 50px;
-   
-        }
-
-        #box1 { 
-            background-color: rgb(218, 151, 28);
-        }
-
-        #box2 {
-            background-color: green;
-        }
-
-        #box3 {
-            background-color: pink;
-        }
-
-        #box4 {
-            background-color: rgb(145, 19, 19);
-        }
-
-        #box5 {
-            background-color: blueviolet;
-        }
-
-
-    </style>
+    <title>Imprimir dia e ano</title>
 </head>
 <body>
 
+    <!-- Imprima o dia, o mês e o ano de acordo com o sistema operacional
+    Saída exemplo: Terça-feira, 26 de setembro de 2023​ -->
+
     <script>
-        function errado1() {
-            document.getElementById("box1").innerHTML="X";
-            box1.style.backgroundColor = "white";
-        }
+        let data = new Date();
+        let diaDaSemana;
+        let diaDoMes= data.getDate();
+        let mes;
+        let ano= data.getFullYear();
 
-        function errado2() {
-            document.getElementById("box2").innerHTML="X";
-            box2.style.backgroundColor = "white";
-        }
+       switch (data.getDay())
+       {
 
-        function errado3() {
-            document.getElementById("box3").innerHTML="X";
-            box3.style.backgroundColor = "white";
-        }
+        case 0:
+            diaDaSemana= 'Domingo';
+            break;
 
-        function errado4() {
-            document.getElementById("box4").innerHTML="X";
-            box4.style.backgroundColor = "white";
-        }
+            case 1:
+            diaDaSemana= 'Segunda-Feira';
+            break;
 
-        function certo5() {
-            document.getElementById("box5").innerHTML="PREMIADO";
-            box5.style.backgroundColor = "white";
-        }
+            case 2:
+            diaDaSemana= 'Terça-Feira';
+            break;
 
+            case 3:
+            diaDaSemana= 'Quarta-Feira';
+            break;
+
+            case 4:
+            diaDaSemana= 'Quinta-Feira';
+            break;
+
+            case 5:
+            diaDaSemana= 'Sexta-Feira';
+            break;
+
+            case 6:
+            diaDaSemana= 'Sábado';
+            break;
+
+       }
+
+       switch (data.getMonth()) {
+
+        case 0: 
+        mes= 'Janeiro';
+        break;
+
+        case 1: 
+        mes= 'Fevereiro';
+        break;
+
+        case 2: 
+        mes= 'Março';
+        break;
+
+        case 3: 
+        mes= 'Abril';
+        break;
+
+        case 4: 
+        mes= 'Maio';
+        break;
+
+        case 5: 
+        mes= 'Junho';
+        break;
+
+        case 6: 
+        mes= 'Julho';
+        break;
+
+        case 7: 
+        mes= 'Agosto';
+        break;
+
+        case 8: 
+        mes= 'Setembro';
+        break;
+
+        case 9: 
+        mes= 'Outubro';
+        break;
+
+        case 10: 
+        mes= 'Novembro';
+        break;
+
+        case 11: 
+        mes= 'Dezembro';
+        break;
+
+       }
+
+       let resultado = diaDaSemana + ', ' + diaDoMes + ' de ' + mes + ' de ' + ano;
+       document.write ('<h1><font color=blue>' + resultado + '</h1></font>');
+
+      
+
+   
     </script>
-
-    <div id= "box1" onmouseup= "errado1()"></div>
-
     
-
-    <div id="box2" onmouseup="errado2()">
-        
-    </div>
-
-    <div id="box3" onmouseup="errado3()">
-        
-    </div>
-
-    <div id="box4" onmouseup="errado4()">
-        
-    </div>
-
-    <div id="box5" onmouseup="certo5()">
-        
-    </div>
-    
-   
-     
-    
-   
 </body>
 </html>
