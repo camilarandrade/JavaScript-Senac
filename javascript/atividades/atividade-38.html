@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimir a imagem na página</title>
+</head>
+
+<body>
+
+    <!-- Crie um programa que leia um numero inteiro e imprima na página a imagem do seu professor de acordo com o numero digitado, siga o layout abaixo: -->
+<style>
+    body {
+        display: flex;
+        
+    }
+</style>
+
+    <script>
+
+        let numero = parseInt(prompt('Digite um número: '));
+        let x = 1;
+
+        let imagensProfessor = document.getElementById('imagensProfessor');
+
+
+        while (x <= numero) {
+        
+
+          document.write ('<table><tr bgcolor=#D3D3D3><td><font color= red> &#x2764; ' + x + ' &#x2764;</font><tr><td><img src=imagens/cristiano.png width=100px></td><tr bgcolor=#808080><td>&#x1F60D; &#x1F60D; &#x1F60D;</td>' )
+
+            x++;
+
+        }
+
+    
+       
+
+    </script>
+
+</body>
+
+</html>

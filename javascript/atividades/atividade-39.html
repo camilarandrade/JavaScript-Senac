@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha correta</title>
+</head>
+<body>
+
+    <script>
+        // Crie um programa que amarzene uma senha definida por você e solicite ao usuário digitar a senha, enquanto a senha digitada for diferente da sua senha o programa deverá continuar solicitando, caso seja a senha correta deverá imprimir na página que a senha está correta
+        
+
+        let pergunta= prompt ('Digite a senha: ', '')
+        let senha= 'Senac';
+
+        while (pergunta !=senha){
+            alert ('Senha incorreta! Tente novamente.');
+            let pergunta= prompt ('Digite a senha: ','');
+            
+        }
+
+        document.write ('A senha digitada está correta, <b> Bem Vindo!');
+
+    </script>
+    
+</body>
+</html>

@@ -1,19 +1,21 @@
 body {
-    background-color: #ebe7e0;
+    background: linear-gradient(to right top, #e19cbca6, white,#E19C9C);
     font: 13pt Arial;
+    
 }
 
 main {
-    background-color: white;
+    background-color: rgb(236, 222, 222);
     width: 800px;
     padding: 20px;
     margin: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.529);
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(95, 89, 89, 0.529);
 }
 
 h1 {
-    color: #817979;
+    color: rgb(165, 155, 155);
+    font-family: 'Lexend', sans-serif;
 }
 
 .titulo-2{
@@ -21,7 +23,8 @@ h1 {
 }
 
 h2 {
-    color: #817979;
+    color: rgb(165, 155, 155);
+    font-family: 'Lexend', sans-serif;
 }
 
 aside {
@@ -32,6 +35,8 @@ aside {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    
+
 }
 
 aside img {
@@ -41,12 +46,22 @@ aside img {
     margin-right: 10px;
 }
 
+li {
+    font-family: 'Lexend', sans-serif;
+    color: rgb(104, 88, 88);
+    list-style:circle;
+    
+}
+
 a, a:visited {
-    color: rgb(34, 34, 34);
+    
+    color: rgb(121, 106, 106);
     font-weight: bolder;
+    font-family: 'Lexend', sans-serif;
+    
 }
 
 a:hover {
-    color: darkgoldenrod;
+    color: #E19C9C;
     text-decoration: none;
 }
