@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar formulário: Cadastro de Clientes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 
     <!-- Criar formulário: Cadastro de Clientes.
@@ -21,44 +24,230 @@
     Deixar o mais bonito possível (CSS). Fazer até amanhão. -->
 
     <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
         #formulario {
-            
-            border: 2px solid black;
             width: 450px;
             margin: auto;
             padding: 50px;
             text-align: left;
-            color: rgb(122, 69, 77);
-            font: 
+            color: rgb(252, 250, 250);
+            border-radius: 50px;
+            background: rgb(139, 43, 99);
+            font-family: verdana;
+            font-size: 13px;
+            box-shadow: 5px 5px 10px hsla(0, 3%, 24%, 0.5);
+            margin-top: 50px;
+        }
+
+        .form-input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
             
         }
 
-        form {
-            align-items: center;
-            justify-content: center;
+        label {
+            flex: 1;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        input,
+        textarea {
+            flex: 2;
+            border-radius: 10px;
+            border: none;
+            
+               }
+
+              
+
+               
+
+        button {
+            color: rgb(112, 68, 106);
+            background: white;
+            border-radius: 30px;
+            padding: 2px 10px 2px 10px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            color: white;
+            background: rgb(112, 68, 106);
+            border-radius: 30px;
+            padding: 2px 10px 2px 10px;
+            margin-top: 10px;
+            border: none;
+
+        }
+
+        .button-group {
+
             text-align: center;
         }
+
+        .button-group label {
+            font-size: 15px;
+        }
+
+    
     </style>
 
+
     <div id="formulario">
-    <form>
-       Digite o seu nome/Razão Social: <input type="text" name="nome" id="nome"><br>
-       Informe o CPF/CNPJ: <input type="text" value="11111111111"><br>
-       Digite o CEP: <input type="text" name="cep" id="cpfOuCnpj"><br>
-      Logradouro: <input type="text" name="logradouro" id="logradouro"><br>
-      Número: <input type="text" name="numero" id="numero"><br>
-      Complemento: <input type="text" name="complemento" id="complemento"><br>
-      Cidade: <input type="text" name="cidade" id="cidade"><br>
-      Estado: <input type="text" name="estado" id="estado" ><br>
-      Telefone fixo com DDD: <input type="text" name="telefone" id="telefone"><br>
-      Celular com DDD: <input type="text" name="celular" id="celular"><br>
-      Enviar E-mail: <br><button type="button" id="btnsim">Sim</button>
-      <button type="button" id="btnsim">Não</button><br>
-      Renda/Faturamento <input type="text" name="renda" id="renda"><br>
-      Observações:  <input type="textarea" name="obs" id="obs"><br>
+        <form>
+            <div class="form-group">
+                <div class="form-input">
+                    <label for="nome">Digite o seu nome/Razão Social:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div class="form-input">
+                    <label for="cnpj">Informe o CPF/CNPJ:</label>
+                    <input type="text" id="cnpj" value="00000000000">
+                </div>
+                <div class="form-input">
+                    <label for="cep">Informe o CEP</label>
+                    <input type="text" name="cep" id="cep" maxlength="9" onblur="consultarCEP()" required>
+                </div>
+                <div class="form-input">
+                    <label for="logradouro">logradouro</label>
+                    <input type="text" name="logradouro" id="logradouro">
+                </div>
+                <div class="form-input">
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="numero">
+                </div>
+                <div class="form-input">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" name="complemento" id="complemento">
+                </div>
+                <div class="form-input">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div class="form-input">
+                    <label for="estado">Estado:</label>
+                    <input type="text" name="estado" id="estado">
+                </div>
+                <div class="form-input">
+                    <label for="telefone">Telefone fixo com DDD:</label>
+                    <input type="text" name="telefone" id="telefone" inputmode="numeric">
+                </div>
+                <div class="form-input">
+                    <label for="celular">Celular com DDD:</label>
+                    <input type="text" name="celular" id="celular">
+                </div>
+                <div class="form-input">
+                    <label for="renda">Renda/faturamento</label>
+                    <input type="text" name="renda" id="renda">
+                </div>
+                <div class="form-input">
+                    <label for="obs">Observações:</label>
+                    <input type="text" name="obs" id="obs"></textarea>
+                </div>
+                <div class="button-group">
+                    <label for="email">Enviar e-mail?</label> <br>
+                    <button type="button" id="btnsim">Sim</button>
+                    <button type="button" id="btnnao">Não</button>
+                </div>
+            </div>
+        </form>
     </div>
 
-    </form>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function consultarCEP() {
+            var cep = document.getElementById('cep').value;
+
+            //verifica se o CEP possui apenas números - regex
+            if (!cep.match(/^[-0-9]+$/)) {
+                alert('O CEP deve conter apenas números.');
+                return;
+            }
+
+
+            //Consulta o CEP no ViaCEP
+            $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function (data) {
+                if (!data.erro) {
+                    document.getElementById('logradouro').value = data.logradouro;
+                    document.getElementById('complemento').value = data.bairro;
+                    document.getElementById('cidade').value = data.localidade;
+                    document.getElementById('estado').value = data.uf
+                } else {
+                    alert('CEP não encontrado.');
+                }
+
+            });
+        }
+
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var $campo = $("#cep");
+            $campo.mask('00000-000', { reverse: true });
+        });
+    </script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+    <script type="text/javascript">
+        var options = {
+            onKeyPress: function (cpf, ev, el, op) {
+                var masks = ['000.000.000-000', '00.000.000/0000-00'];
+                $('#cnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+            }
+        }
+
+        $('#cnpj').length > 11 ? $('#cnpj').mask('00.000.000/0000-00', options) : $('#cnpj').mask('000.000.000-00#', options);
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var telefoneInput = $('#telefone');
+
+            telefoneInput.mask('(00) 0000-0000');
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var celularInput = $('#celular');
+
+            celularInput.mask('(00) 00000-0000');
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var faturamentoInput = $('#renda');
+
+            faturamentoInput.maskMoney({ prefix: 'R$ ', allowNegative: false, thousands: '.', decimal: ',' });
+        });
+    </script>
+
 </body>
+
 </html>
