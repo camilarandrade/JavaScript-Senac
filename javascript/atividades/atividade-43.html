@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar formulário: Cadastro de Clientes</title>
+</head>
+<body>
+
+    <!-- Criar formulário: Cadastro de Clientes.
+    Campos:
+    Nome/Razão Social (Obrigatório)
+    CPF/CNPJ (obrigatório- Mascaramento automático)
+    Endereço (cep, logradouro, numero, complemento, cidade, estado, API: Via Cep)
+    Telefone fixo com DDD (99) 99999-9999
+    Data aniversário/inauguração (99/99/9999)
+    Enviar email (sim/não) (Usar Select)
+    renda/faturamento 
+    observações (textarea)
+    
+    Deixar o mais bonito possível (CSS). Fazer até amanhão. -->
+
+    <style>
+        #formulario {
+            
+            border: 2px solid black;
+            width: 450px;
+            margin: auto;
+            padding: 50px;
+            text-align: left;
+            color: rgb(122, 69, 77);
+            font: 
+            
+        }
+
+        form {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+
+    <div id="formulario">
+    <form>
+       Digite o seu nome/Razão Social: <input type="text" name="nome" id="nome"><br>
+       Informe o CPF/CNPJ: <input type="text" value="11111111111"><br>
+       Digite o CEP: <input type="text" name="cep" id="cpfOuCnpj"><br>
+      Logradouro: <input type="text" name="logradouro" id="logradouro"><br>
+      Número: <input type="text" name="numero" id="numero"><br>
+      Complemento: <input type="text" name="complemento" id="complemento"><br>
+      Cidade: <input type="text" name="cidade" id="cidade"><br>
+      Estado: <input type="text" name="estado" id="estado" ><br>
+      Telefone fixo com DDD: <input type="text" name="telefone" id="telefone"><br>
+      Celular com DDD: <input type="text" name="celular" id="celular"><br>
+      Enviar E-mail: <br><button type="button" id="btnsim">Sim</button>
+      <button type="button" id="btnsim">Não</button><br>
+      Renda/Faturamento <input type="text" name="renda" id="renda"><br>
+      Observações:  <input type="textarea" name="obs" id="obs"><br>
+    </div>
+
+    </form>
+    
+</body>
+</html>
