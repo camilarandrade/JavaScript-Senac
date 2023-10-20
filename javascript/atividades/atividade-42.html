@@ -1,14 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expressão Regular</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Validação Formulario</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000000;
+            display: flex;
+            font-family: 'Jura', sans-serif;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+           
+        }
+
+        .container {
+            background-color: #8a1968;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px hsla(0, 3%, 24%, 0.5);
+            width: 450px;
+            
+        }
+
+        .header {
+            padding: 50px 40px;
+        }
+
+        .header h2 {
+         
+            color: #ffffff;
+            font-size: 25px;
+        }
+
+        .form {
+            padding: 0 50px 40px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+           
+        }
+
+        .form-control label {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .form-control input {
+            border: none;
+            border-radius: 40px;
+            font-size: 14px;
+            width: 100%;
+            padding: 10px;
+            
+        }
+
+
+        .form button {
+            background-color: #ffffff;
+            border-radius: 50px;
+            color: #8a1968;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            width: 100px;
+            margin-top: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .form button:hover {
+            background-color: #8a193b;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+       
+        .erro {
+            display: none;
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('form');
+            const nomeUsuarioInput = document.getElementById('nomeusuario');
+            const nomeEmailInput = document.getElementById('nomeEmail');
+            const erroElement = document.getElementById('erroNome');
+            const erroEmailElement = document.getElementById('erroEmail');
+
+            form.addEventListener('submit', function (event) {
+                if (nomeUsuarioInput.value.trim() === '') {
+                    event.preventDefault(); // impede o envio do formulário
+
+                    // Exibe a mensgem de erro
+                    erroElement.style.display = 'block';
+                }
+                else {
+                    // Se o campo não estiver vazio, oculta a mensagem de erro
+                    erroElement.style.display = 'none';
+                };
+
+                if (nomeEmailInput.value.trim() === '') {
+                    event.preventDefault();
+                    erroEmailElement.style.display = 'block';
+                }
+                else {
+                    erroEmailElement.style.display = 'none';
+                };
+
+                // validar o campo de e-mail com uma expressão regular ou u e-mail valido
+                const emaliRegex = /^[A-Za-z0-9._%]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+                if (!emaliRegex.test(nomeEmailInput.value.trim())) {
+                    event.preventDefault();
+                    erroEmailElement.style.display = 'block';
+                }
+                else {
+                    erroEmailElement.style.display = 'none';
+                };
+            });
+        });
+    </script>
 </head>
+
 <body>
+
     <div class="container">
         <div class="header">
             <h2>Criar Conta</h2>
@@ -25,22 +156,20 @@
             </div>
 
             <!-- campo e-mail -->
-
             <div class="form-control">
-                <label for="nomeEmail">E-mail</label>
+                <label for="nomeEmail">E-mail:</label>
                 <input type="text" id="nomeEmail">
-
                 <!-- div criada para exibir mensagens de erro -->
-
-                <div id="erroEmail" class="erro">Por favor, preencha o campo E-mail</div>
+                <div id="erroEmail" class="erro">Por favor, preencha o campo de E-mail.</div>
             </div>
 
 
-           
             <button type="submit">ENVIAR</button>
 
         </form>
     </div>
 
 </body>
+
+
 </html>
