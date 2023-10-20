@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elabora um programa utilizando os seguintes eventos de teclado:</title>
+    <title>Eventos de Teclado</title>
 </head>
 
 <body>
 
-    <!-- Elabora um programa utilizando os seguintes eventos de teclado: 
-        onkeydown, onkeyup, onkeypress -->
+    <h1>Eventos de Teclado</h1>
 
+    <p>Pressione uma tecla e veja os eventos ocorrerem:</p>
+
+    <p>Último evento: <span id="ultimoEvento">Nenhum</span></p>
+
+    <script>
+
+        function atualizarUltimoEvento(evento) {
+            document.getElementById("ultimoEvento").textContent = evento;
+        }
+
+
+        document.onkeydown = function (event) {
+            atualizarUltimoEvento("onkeydown: " + event.key);
+        };
+
+
+        document.onkeyup = function (event) {
+            atualizarUltimoEvento("onkeyup: " + event.key);
+        };
+
+
+        document.onkeypress = function (event) {
+            atualizarUltimoEvento("onkeypress: " + event.key);
+        };
+    </script>
 
 </body>
 
